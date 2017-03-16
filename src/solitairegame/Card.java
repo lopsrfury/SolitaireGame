@@ -1,9 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package solitairegame;
+
+import java.awt.image.BufferedImage;
 
 /**
  *
@@ -12,32 +10,20 @@ package solitairegame;
 public class Card {
     //Creating card peramiters
     private String suit;
-    private String rank;
-    private String value;
+    private String face;
+    private int value;
     
-    //sets up code for what the card contains
-    public card(String cRank, String cSuit, String cValue){
-        rank = cRank;
-        suit = cSuit;
-        value = cValue;
-    }
     
-    //shows rank
-    public String rank(){
-        return rank;
-    }
-    
-    //shows suit
-    public String suit(){
-        return suit;
-    }
-    
-    //shows value
-    public String value(){
-        return value;
-    }
-    
-    System.out.println suit;
-    System.out.println rank;
-    System.out.println value;
+    /**
+     * The constructor for card class
+     * @param suit (spades, clubs ...)
+     * @param face (2,3,4,5... Ace)
+     * @param value (2,3,4...) 
+     */
+public Card(String suit, String face, int value){
+    this. suit = suit;
+    this.face = face;
+    this.value = value;
+    }    
+
 }
