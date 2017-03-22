@@ -27,7 +27,7 @@ public class Card {
      }
  }
  public  String toString(){
-     return suit.toString() + rank; 
+     return rank + suit.toString(); 
  }
 
 }
