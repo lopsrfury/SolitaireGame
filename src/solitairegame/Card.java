@@ -1,29 +1,33 @@
 
 package solitairegame;
 
-import java.awt.image.BufferedImage;
-
 /**
  *
- * @author John
+ * @author lopsrfury
  */
 public class Card {
-    //Creating card peramiters
-    private String suit;
-    private String face;
-    private int value;
-    
-    
-    /**
-     * The constructor for card class
-     * @param suit (spades, clubs ...)
-     * @param face (2,3,4,5... Ace)
-     * @param value (2,3,4...) 
-     */
-public Card(String suit, String face, int value){
-    this. suit = suit;
-    this.face = face;
-    this.value = value;
-    }    
+ 
+ private final int rank;
+ private final Suit suit;
+ private Boolean faceUp = false;
+ 
+ 
+ 
+ public Card(Suit suit, int rank){
+     this.suit = suit;
+     this.rank = rank;
+ }
+ //if up put down if down up
+ public Boolean flip(){
+     if (faceUp = false){
+         return faceUp = true;
+     }
+     else{
+         return faceUp = false;
+     }
+ }
+ public  String toString(){
+     return suit.toString() + rank; 
+ }
 
 }
