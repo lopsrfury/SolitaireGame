@@ -19,15 +19,21 @@ public class Card {
  }
  //if up put down if down up
  public Boolean flip(){
-     if (faceUp = false){
+     if (faceUp == false){
          return faceUp = true;
      }
      else{
-         return faceUp = false;
+         return faceUp = false;     
      }
  }
  public  String toString(){
-     return rank + suit.toString(); 
+     if (faceUp == true){
+         return rank + suit.toString(); 
+     }
+     else{
+         return "X";
+     }
+    
  }
 
 }
