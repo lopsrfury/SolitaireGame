@@ -22,8 +22,9 @@ public class CardTester {
     public void smokeTest(){
         
         Card myCard = new Card(Suit.D, 4);
+        myCard.flip();
     
-         assertEquals( "D4", myCard.toString() );
+         assertEquals( "4D", myCard.toString() );
     }
     
 }
