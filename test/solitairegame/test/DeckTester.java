@@ -10,6 +10,7 @@ package solitairegame.test;
 import solitairegame.Deck;
 import org.junit.After;
 import org.junit.AfterClass;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -33,5 +34,12 @@ public class DeckTester {
      public void hello() {
         Deck deck = new Deck();
         assertEquals(52, deck.Cards().size());
+     }
+     @Test
+     public void checkRandomDeck(){
+         Deck a = new Deck();
+         Deck b = new Deck();
+         
+         assertNotEquals(a.Cards().get(5), b.Cards().get(5));
      }
 }

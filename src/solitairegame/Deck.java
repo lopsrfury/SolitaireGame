@@ -13,18 +13,18 @@ public class Deck
         
     public Deck(){
         
-        // Create list of cards
-          for (Suit suit : Suit.values()) {
-                for (int i = 1; i < 13; i++){
-                    _cards.add(new Card(suit, i));
-                }
-            }
- 
-            
+    // Create list of cards
+    for (Suit suit : Suit.values()) {
+        for (int i = 1; i < 14; i++){
+                _cards.add(new Card(suit, i));
+        }
+    }
+    
+    int seed = new Random().nextInt();
+    System.out.println("seed=" + seed );
+    Random rand = new Random(seed );
 
-    Random rand = new Random(52);
-
-        // Shuffle cards
+    // Shuffle cards
     Collections.shuffle(_cards, rand);
 
     } 
