@@ -15,14 +15,21 @@ public class Table {
     List<Card> Dpile = new ArrayList<Card>();
     List<Card> Hpile = new ArrayList<Card>();
     List<Card> Spile = new ArrayList<Card>();
-    List<Card> Colum1 = new ArrayList<Card>();
-    List<Card> Colum2 = new ArrayList<Card>();
-    List<Card> Colum3 = new ArrayList<Card>();
-    List<Card> Colum4 = new ArrayList<Card>();
-    List<Card> Colum5 = new ArrayList<Card>();
-    List<Card> Colum6 = new ArrayList<Card>();
-    List<Card> Colum7 = new ArrayList<Card>();
 
 
+    List<List<Card>> Colums = new ArrayList<List<Card>>();
+
+public Table(){
+
+    Colums.add(new ArrayList<Card>());
+    Colums.add(new ArrayList<Card>());
+    Colums.add(new ArrayList<Card>());
+    Colums.add(new ArrayList<Card>());
+    Colums.add(new ArrayList<Card>());
+    Colums.add(new ArrayList<Card>());
+    Colums.add(new ArrayList<Card>());
     
+    
+
+   }
 }

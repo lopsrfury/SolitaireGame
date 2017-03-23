@@ -21,7 +21,7 @@ public class Deck
     }
     
     int seed = new Random().nextInt();
-    System.out.println("seed=" + seed );
+    // System.out.println("seed=" + seed );
     Random rand = new Random(seed );
 
     // Shuffle cards
