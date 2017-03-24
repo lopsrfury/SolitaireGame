@@ -17,9 +17,17 @@ public class TableViewer {
         */
        // Print stack, draw and piles
        System.out.print("  ");
-       System.out.print(table.Stack.get(table.Stack.size()-1));
        
-       System.out.print(table.Draw);
+       if(table.Stack.size() > 0){
+       System.out.print(table.Stack.get(table.Stack.size()-1));
+       }
+       
+       System.out.print("  ");
+       
+       if(table.Draw.size() > 0){
+       System.out.print(table.Draw.get(table.Draw.size()-1));
+       }
+       
        System.out.print("        ");
        System.out.print(table.Cpile);
        System.out.print("    ");
@@ -32,6 +40,7 @@ public class TableViewer {
        
 
          // Print Cards in rows and columns 
+         
         for(int rowcount = 0; rowcount < getRowSize(table); rowcount++){
         
             for(int columncount = 0; columncount < table.Colums.size(); columncount++){

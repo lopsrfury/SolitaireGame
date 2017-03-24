@@ -30,7 +30,7 @@ public class SolitaireGame {
         String input = "";
          while(!input.equals("q")){
              tableView.print(_table);
-             System.out.println("press q to quit, m to move");
+             System.out.println("press q to quit, m to move, d to draw");
              input = userInput.next();
              System.out.println("user input=" + input);
              
@@ -39,6 +39,9 @@ public class SolitaireGame {
                  input = userInput.next();
                  String[] colums = input.split(",");
                  dealer.move(Integer.parseInt(colums[0])-1, Integer.parseInt(colums[1])-1);
+             }
+             else if(input.equals("d")){
+                dealer.Draw();
              }
          }
         
