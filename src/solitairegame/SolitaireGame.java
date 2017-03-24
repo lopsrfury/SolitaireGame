@@ -1,7 +1,7 @@
 
 
 package solitairegame;
-
+import java.util.Scanner;
 /**
  *
  * @author lopsrfury
@@ -26,8 +26,23 @@ public class SolitaireGame {
         
         //dealing the initial card setup
         dealer.Init(_table, _deck);
+        Scanner userInput = new Scanner(System.in);
+        String input = "";
+         while(!input.equals("q")){
+             tableView.print(_table);
+             System.out.println("press q to quit, m to move");
+             input = userInput.next();
+             System.out.println("user input=" + input);
+             
+             if(input.equals("m")){
+                 System.out.print("from,to");
+                 input = userInput.next();
+                 String[] colums = input.split(",");
+                 dealer.move(Integer.parseInt(colums[0])-1, Integer.parseInt(colums[1])-1);
+             }
+         }
         
-        tableView.print(_table);
     }
+    
     
 }
