@@ -9,7 +9,7 @@ public class Card {
  
  private final int rank;
  private final Suit suit;
- private Boolean faceUp = false;
+ public Boolean faceUp = false;
  
  
  

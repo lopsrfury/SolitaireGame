@@ -29,13 +29,13 @@ public class TableViewer {
        }
        
        System.out.print("        ");
-       System.out.print(table.Cpile);
+       System.out.print(table.Piles.get(0));
        System.out.print("    ");
-       System.out.print(table.Dpile);
+       System.out.print(table.Piles.get(1));       
        System.out.print("    ");
-       System.out.print(table.Hpile);
+       System.out.print(table.Piles.get(2));
        System.out.print("    ");
-       System.out.println(table.Spile);
+       System.out.print(table.Piles.get(3));
        System.out.println();
        
 

@@ -35,6 +35,7 @@ public class Dealer {
        table.Colums.get(6).get(table.Colums.get(6).size()-1).flip();
         
        
+       
        //gives remaing cards to stack
        table.Stack = deck.Cards().subList(28,deck.Cards().size());
     
@@ -44,7 +45,12 @@ public class Dealer {
         
        List<Card> fromCol = _table.Colums.get(from);
        Card fromCard = fromCol.remove(fromCol.size()-1);
-       fromCol.get(fromCol.size()-1).flip();
+      
+       if(fromCol.size() > 0){
+            if(fromCol.get(fromCol.size()-1).faceUp == false){
+            fromCol.get(fromCol.size()-1).flip();
+            }
+       }
        List<Card> toCol = _table.Colums.get(to);
        toCol.add(fromCard);
     }
@@ -69,5 +75,17 @@ public class Dealer {
        _table.Draw.add(stackCard);
        stackCard.flip();
        }
+    }
+    public void moveToPile(int from, int toPile){
+        List<Card> fromCol = _table.Colums.get(from);
+       Card fromCard = fromCol.remove(fromCol.size()-1);
+      if(fromCol.size() > 0){
+           if(fromCol.get(fromCol.size()-1).faceUp == false){
+           fromCol.get(fromCol.size()-1).flip();
+           }
+       }
+       List<Card> Pile = _table.Piles.get(toPile);
+       Pile.add(fromCard);
+       
     }
 }
